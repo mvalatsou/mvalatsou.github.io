@@ -1,0 +1,36 @@
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" href="{{ "/" | relURL }}">
+      {{ with .Site.Params.logo }}<img src="{{ . | relURL }}" alt="" class="brand-logo">{{ end }}
+      <span>{{ .Site.Title }}</span>
+    </a>
+
+    <input type="checkbox" id="nav-toggle" class="nav-toggle" hidden>
+    <label for="nav-toggle" class="nav-burger" aria-label="Menu"><span></span><span></span><span></span></label>
+
+    <nav class="nav">
+      {{ $here := .RelPermalink }}
+      {{ range .Site.Menus.main }}
+        {{/* A tab is highlighted when its URL matches the page being shown. */}}
+        {{ $url := .URL | relURL }}
+        {{ $active := eq $here $url }}
+        <a href="{{ $url }}"{{ if $active }} class="active" aria-current="page"{{ end }}>{{ .Name }}</a>
+      {{ end }}
+      {{ if .Site.Params.themeToggle }}
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" onclick="toggleTheme()">
+          <span class="theme-icon-light">☾</span><span class="theme-icon-dark">☀</span>
+        </button>
+      {{ end }}
+    </nav>
+  </div>
+</header>
+<script>
+  function toggleTheme() {
+    var root = document.documentElement;
+    var isDark = root.getAttribute('data-theme') === 'dark'
+      || (!root.getAttribute('data-theme') && matchMedia('(prefers-color-scheme: dark)').matches);
+    var next = isDark ? 'light' : 'dark';
+    root.setAttribute('data-theme', next);
+    try { localStorage.setItem('theme', next); } catch (e) {}
+  }
+</script>

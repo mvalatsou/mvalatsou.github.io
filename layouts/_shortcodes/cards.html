@@ -1,0 +1,5 @@
+{{/* Wrap {{< card >}} blocks in a responsive grid:
+       {{< cards >}}
+         {{< card title="Interiors" >}}Some text.{{< /card >}}
+       {{< /cards >}}                                                        */}}
+<div class="cards">{{ .Inner | .Page.RenderString (dict "display" "block") }}</div>

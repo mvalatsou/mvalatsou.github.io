@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div class="social">
+    {{ range .Site.Params.social }}
+      <a href="{{ .url }}" title="{{ .name }}" rel="me noopener" {{ if not (hasPrefix .url "mailto:") }}target="_blank"{{ end }}>
+        {{ partial (printf "icons/%s.html" (.icon | default "link")) . }}
+        <span class="sr-only">{{ .name }}</span>
+      </a>
+    {{ end }}
+  </div>
+  <p class="copyright">© {{ now.Year }} {{ .Site.Title }} · Built with <a href="https://gohugo.io/">Hugo</a></p>
+</footer>

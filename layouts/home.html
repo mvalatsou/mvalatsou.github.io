@@ -1,0 +1,14 @@
+{{ define "main" }}
+<section class="hero">
+  {{ with .Site.Params.avatar }}
+    <img class="avatar" src="{{ . | relURL }}" alt="{{ $.Site.Params.avatarAlt }}">
+  {{ end }}
+  <h1>{{ .Site.Title }}</h1>
+  {{ with .Site.Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+  {{ with .Site.Params.description }}<p class="tagline">{{ . }}</p>{{ end }}
+</section>
+
+<article class="prose">
+  {{ .Content }}
+</article>
+{{ end }}

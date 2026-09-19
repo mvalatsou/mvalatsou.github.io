@@ -1,0 +1,94 @@
+# ---------------------------------------------------------------------------
+# Site-wide configuration. Restart `hugo serve` after editing this file.
+# ---------------------------------------------------------------------------
+
+baseURL           = 'https://marilina.valatsos.gr/'
+title             = 'Marilina Valatsou'
+languageCode      = 'en-us'
+defaultContentLanguage = 'en'
+enableEmoji       = true
+enableRobotsTXT   = true
+
+[params]
+  # Shown under your name on the home page.
+  subtitle    = 'Doctoral Student at D-PHYS, ETH Zürich'
+  description = 'Modelling exoplanetary interiors and atmospheres'
+
+  avatar      = '/images/self.png'
+  avatarAlt   = 'Marilina Valatsou'
+  logo        = '/images/logo.png'
+
+  email       = 'mvalatsou@phys.ethz.ch'
+  # Set to false to hide the light/dark theme switch in the header.
+  themeToggle = true
+
+  # Footer / contact links. Add or remove freely.
+  # `icon` must match a file in layouts/_partials/icons/ (email, github, gitlab,
+  # linkedin, orcid, scholar). Anything else falls back to a generic link icon.
+  [[params.social]]
+    name = 'Email'
+    icon = 'email'
+    url  = 'mailto:mvalatsou@phys.ethz.ch'
+  [[params.social]]
+    name = 'GitHub'
+    icon = 'github'
+    url  = 'https://github.com/mavalat'
+  [[params.social]]
+    name = 'GitLab'
+    icon = 'gitlab'
+    url  = 'https://gitlab.com/mavalat'
+  [[params.social]]
+    name = 'LinkedIn'
+    icon = 'linkedin'
+    url  = 'https://www.linkedin.com/in/marilina-valatsou-841197117'
+  # [[params.social]]
+  #   name = 'ORCID'
+  #   icon = 'orcid'
+  #   url  = 'https://orcid.org/0000-0000-0000-0000'
+
+# ---------------------------------------------------------------------------
+# Navigation tabs. `weight` decides the order (smaller = further left).
+# `url` must match the file name in content/ (e.g. content/research.md -> /research/).
+# ---------------------------------------------------------------------------
+[menu]
+  [[menu.main]]
+    name   = 'Home'
+    url    = '/'
+    weight = 1
+  [[menu.main]]
+    name   = 'About Me'
+    url    = '/about/'
+    weight = 2
+  [[menu.main]]
+    name   = 'Research'
+    url    = '/research/'
+    weight = 3
+  [[menu.main]]
+    name   = 'CV'
+    url    = '/cv/'
+    weight = 4
+  [[menu.main]]
+    name   = 'Publications'
+    url    = '/publications/'
+    weight = 5
+  [[menu.main]]
+    name   = 'Contact'
+    url    = '/contact/'
+    weight = 6
+
+# No blog tags/categories on this site — remove this block if you ever want them.
+[taxonomies]
+
+[markup]
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel   = 3
+  [markup.highlight]
+    style              = 'monokai'
+    noClasses          = true
+  [markup.goldmark.renderer]
+    # Allows raw HTML inside markdown files.
+    unsafe = true
+
+[minify]
+  minifyOutput = true

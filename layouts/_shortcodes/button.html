@@ -1,0 +1,2 @@
+{{/* {{< button href="/files/cv.pdf" >}}Download CV (PDF){{< /button >}} */}}
+<a class="button{{ if eq (.Get "style") "ghost" }} ghost{{ end }}" href="{{ .Get "href" | relURL }}"{{ if .Get "blank" }} target="_blank" rel="noopener"{{ end }}>{{ .Inner | .Page.RenderString }}</a>

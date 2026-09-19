@@ -1,0 +1,68 @@
+# ---------------------------------------------------------------------------
+# Your publication list. Add a new "- " block per paper; the Publications page
+# groups them by `year` automatically (newest first) and sorts within a year.
+#
+# Fields (all optional except title/authors/year):
+#   type    : article | preprint | proceedings | thesis   (shown as a small tag)
+#   authors : write your own name as **Marilina Valatsou** to bold it
+#   venue   : journal / conference name
+#   doi, arxiv, url, pdf : any you have; each becomes a link button
+#   note    : free text, e.g. "in review", "editor's choice"
+#   topics  : list of colored labels shown above the title, e.g.
+#             topics: [interiors, modelling]
+#             Colored: observations, interiors, atmospheres, modelling, chemistry
+#             (any other word still works, in a neutral grey; add colors in
+#             assets/css/main.css under "Topic labels")
+# ---------------------------------------------------------------------------
+
+- title: "High Pressure Ices on Super-Earths are Rare: Constraints from Formation and Evolution"
+  topics: [atmospheres, modelling]
+  authors: "**M. Valatsou**, C. Dorn, A. Werlen, R. Burn"
+  year: 2026
+  note: "in preparation"
+
+- title: "Energy-limited volcanic outgassing"
+  topics: [interiors, atmospheres]
+  authors: "C. M. Guimond, R. T. Pierrehumbert, **M. Valatsou**, C. Dorn"
+  year: 2026
+  note: "in preparation"
+
+- title: "Retention of Primary Atmospheres on Rocky Worlds Around M Dwarfs: Implications for TRAPPIST-1 Planets"
+  topics: [atmospheres, chemistry, modelling]
+  authors: "K. Bali, C. Dorn, **M. Valatsou**, H. Appius"
+  year: 2026
+  note: "submitted"
+
+- title: "Transit timing variations and a fourth sub-Neptune in the near-resonant system TOI-125"
+  topics: [observations, interiors]
+  authors: "L. Naponiello, P. Leonardi, G. Pichierri, **M. Valatsou**, M. Damasso, C. Dorn, A. S. Bonomo, A. Sozzetti"
+  year: 2026
+  note: "submitted"
+
+- title: "Revisiting TOI-4438 and TOI-442 planetary systems with new observations from SPIRou and TESS"
+  topics: [observations, interiors]
+  authors: "J. Serrano Bell, G. Hébrard, E. Martioli, R. F. Díaz, L. de Almeida, D. Lorenzo-Oliveira, A. Salmi, C. Dorn, **M. Valatsou**, A. Carmona, M. Ould-Elhkim, L. Arnold, É. Artigau, I. Boisse, X. Bonfils, C. Cadieux, Z. Chakir, N. J. Cook, X. Delfosse, J.-F. Donati, R. Doyon, N. Heidari, J. M. Jenkins, F. Kiefer, S. Lafrance, A. L'Heureux, C. Moutou, J. Morneau, X. Vandelac"
+  year: 2026
+  type: article
+  doi: "10.1051/0004-6361/202659984"
+  arxiv: "arXiv:2607.13333"
+  note: "editor's choice"
+
+- title: "Oxygen Left Behind: Atmospheric Enrichment Due to Fractionation in Sub-Neptunes Using BOREAS"
+  topics: [atmospheres, chemistry, modelling]
+  authors: "**M. Valatsou**, C. Dorn, P. Marty, and J. E. Owen"
+  venue: "The Astrophysical Journal"
+  year: 2026
+  type: article
+  doi: "10.3847/1538-4357/ae5104"
+  arxiv: "arXiv:2602.12201"
+  note: "editor's choice"
+
+- title: "Physics-Based Machine Learning: Opportunities and Challenges for Mantle Convection"
+  topics: [interiors, modelling]
+  authors: "**Valatsou, M.**, Degen, D., Dannberg, J., Gassmöller, R., and Wellmann, F.: Physics-Based Machine Learning: Opportunities and Challenges for Mantle Convection, EGUsphere [preprint]"
+  venue: "submitted to Solid Earth (SE)"
+  year: 2026
+  type: preprint
+  url: "https://egusphere.copernicus.org/preprints/2026/egusphere-2026-4171/"
+  note: "in review"

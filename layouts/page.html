@@ -1,0 +1,10 @@
+{{ define "main" }}
+<article class="prose">
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ with .Params.subtitle }}<p class="subtitle">{{ . }}</p>{{ end }}
+  {{ if .Params.toc }}
+    <nav class="toc"><h2>Contents</h2>{{ .TableOfContents }}</nav>
+  {{ end }}
+  {{ .Content }}
+</article>
+{{ end }}

@@ -1,0 +1,37 @@
+{{/* Renders data/publications.yaml, grouped by year (newest first).
+     Use in a content file as:  {{< publications >}}                        */}}
+{{ $pubs := site.Data.publications }}
+{{ if not $pubs }}
+  <p class="muted">No publications listed yet — add them in <code>data/publications.yaml</code>.</p>
+{{ else }}
+  {{ $years := slice }}
+  {{ range $pubs }}{{ $years = $years | append (printf "%v" (.year | default "Undated")) }}{{ end }}
+  {{ $years = $years | uniq | sort | collections.Reverse }}
+  <div class="pubs">
+  {{ range $year := $years }}
+    <section class="pub-year">
+      <h2 id="y{{ $year }}">{{ $year }}</h2>
+      <ol class="pub-list">
+      {{ range $pubs }}
+        {{ if eq (printf "%v" (.year | default "Undated")) $year }}
+        <li class="pub">
+          {{ with .topics }}<div class="pub-topics">{{ range . }}<span class="topic topic-{{ . | urlize }}">{{ . }}</span>{{ end }}</div>{{ end }}
+          {{ with .type }}<span class="tag tag-{{ . }}">{{ . }}</span>{{ end }}
+          <span class="pub-title">{{ .title }}</span>
+          <div class="pub-authors">{{ .authors | markdownify }}</div>
+          {{ with .venue }}<div class="pub-venue">{{ . | markdownify }}</div>{{ end }}
+          {{ with .note }}<div class="pub-note">{{ . }}</div>{{ end }}
+          <div class="pub-links">
+            {{ with .doi }}<a href="https://doi.org/{{ . }}" target="_blank" rel="noopener">DOI</a>{{ end }}
+            {{ with .arxiv }}<a href="https://arxiv.org/abs/{{ . }}" target="_blank" rel="noopener">arXiv</a>{{ end }}
+            {{ with .pdf }}<a href="{{ . | relURL }}" target="_blank" rel="noopener">PDF</a>{{ end }}
+            {{ with .url }}<a href="{{ . }}" target="_blank" rel="noopener">Link</a>{{ end }}
+          </div>
+        </li>
+        {{ end }}
+      {{ end }}
+      </ol>
+    </section>
+  {{ end }}
+  </div>
+{{ end }}
