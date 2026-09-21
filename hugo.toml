@@ -2,7 +2,7 @@
 # Site-wide configuration. Restart `hugo serve` after editing this file.
 # ---------------------------------------------------------------------------
 
-baseURL           = 'https://marilina.valatsos.gr/'
+baseURL           = 'https://mvalatsou.github.io/'
 title             = 'Marilina Valatsou'
 languageCode      = 'en-us'
 defaultContentLanguage = 'en'
