@@ -18,4 +18,4 @@ Now I model exoplanets and try to understand what those bodies that we observe w
 
 ## Outside the office
 
-I enjoy baking & cooking, listening to music and attending as many concerts as I can fit in one year, playing video games & board games, and managing my work hours so I can have enough time to enjoy life.
+I enjoy baking & cooking, listening to music and attending as many concerts as I can, playing video games & board games, and managing my work hours so I can have enough time to enjoy life.

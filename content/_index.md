@@ -6,6 +6,6 @@ I am a PhD student in Astrophysics at ETH Zürich, working on the interiors and 
 
 <!-- Edit this text in content/_index.md. Everything above the page is set in hugo.toml (name, subtitle, tagline, photo). -->
 
-**Currently:** modelling the coupled evolution of mantle and atmosphere for rocky exoplanets that were either born rocky or enveloped
+**Currently:** modelling the coupled evolution of mantle and atmosphere for rocky exoplanets that were either born rocky or enveloped.
 
 [Read about my research →](/research/) · [Publications →](/publications/) · [Get in touch →](/contact/)

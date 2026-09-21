@@ -1,7 +1,5 @@
 +++
-title = 'CV'
-subtitle = 'Curriculum Vitae'
-toc = true
+title = 'Curriculum Vitae'
 +++
 
 <!-- {{< button href="/files/cv.pdf" blank="true" >}}Download the full CV (PDF){{< /button >}} -->
