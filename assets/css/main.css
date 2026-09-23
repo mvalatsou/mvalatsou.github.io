@@ -18,7 +18,7 @@
   --font-ui:   ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 
-  --measure: 44rem;
+  --measure: 62rem;   /* page width: header and content share it */
   --radius: 10px;
 }
 
@@ -83,7 +83,7 @@ a:hover { text-decoration-style: solid; }
   z-index: 10;
 }
 .header-inner {
-  max-width: 62rem;
+  max-width: var(--measure);
   margin: 0 auto;
   padding: .75rem 1.25rem;
   display: flex;
