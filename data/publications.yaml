@@ -21,17 +21,25 @@
   year: 2026
   note: "in preparation"
 
-- title: "Energy-limited volcanic outgassing"
-  topics: [interiors, atmospheres]
-  authors: "C. M. Guimond, R. T. Pierrehumbert, **M. Valatsou**, C. Dorn"
+- title: "Long-Term Evolution of Gas Giants and Sub-Neptunes with the JADE Code"
+  topics: [interiors, modelling]
+  authors: "E. Wong, V. Bourrier, Y. Alibert, P. Eggenberger, J. Egger, C. Dorn, J. Leconte, C. Mordasini, J. Owen, and **M. Valatsou**"
   year: 2026
-  note: "in preparation"
+  type: conference paper
+  doi: "10.5194/epsc2026-1402"
+  note: "EPSC Abstracts 2026"
 
-- title: "Retention of Primary Atmospheres on Rocky Worlds Around M Dwarfs: Implications for TRAPPIST-1 Planets"
-  topics: [atmospheres, chemistry, modelling]
-  authors: "K. Bali, C. Dorn, **M. Valatsou**, H. Appius"
-  year: 2026
-  note: "submitted"
+# - title: "Energy-limited volcanic outgassing"
+#   topics: [interiors, atmospheres]
+#   authors: "C. M. Guimond, R. T. Pierrehumbert, **M. Valatsou**, C. Dorn"
+#   year: 2026
+#   note: "submitted"
+
+# - title: "Retention of Primary Atmospheres on Rocky Worlds Around M Dwarfs: Implications for TRAPPIST-1 Planets"
+#   topics: [atmospheres, chemistry, modelling]
+#   authors: "K. Bali, C. Dorn, **M. Valatsou**, H. Appius"
+#   year: 2026
+#   note: "submitted"
 
 - title: "Transit timing variations and a fourth sub-Neptune in the near-resonant system TOI-125"
   topics: [observations, interiors]
