@@ -1,126 +1,43 @@
-# marilina.valatsos.gr
+Personal website, made with [Hugo](https://gohugo.io/).
 
-Personal academic website, built with [Hugo](https://gohugo.io/).
-Written from scratch in this repo (September 2026) — the older
-`aethrvmn/marilina` repo was a copy of the *gokarna* theme with no content in it, so nothing was carried over except the two images.
-
----
-
-## 1. Running the site on the laptop
-
-Hugo is already installed (`hugo v0.152.2 extended`). If ever needed on a new machine: `brew install hugo`.
+## Running locally
 
 ```bash
-cd ~/PhD/Repos/website
+cd ~/PhD/Repos/mvalatsou.github.io
 hugo serve
 ```
 
-Then open **http://localhost:1313**. It rebuilds and refreshes the browser every time the file is saved. `Ctrl-C` stops it.
+Site at http://localhost:1313. Refreshes on every save, `Ctrl-C` to stop.
 
-To produce the final files for uploading:
+(New laptop: `brew install hugo`.)
 
-```bash
-hugo --gc --minify      # writes everything into public/
-```
+Pushing to `main` builds and publishes the site automatically through GitHub.
 
-`public/` is gitignored — it is generated, never edit it by hand.
-
----
-
-## 2. Where everything lives
+## Structure
 
 ```
-hugo.toml                  ← site settings: name, tabs, photo, social links
-content/                   ← THE TEXT OF THE SITE. This is what gets most edits.
+hugo.toml                  site settings: name, menu tabs, photo, social links
+content/                   text of each page
   _index.md                    home page
-  about.md                     /about/
-  research.md                  /research/
-  cv.md                        /cv/
-  publications.md              /publications/
-  contact.md                   /contact/
+  about.md
+  research.md
+  cv.md
+  publications.md
+  contact.md
 data/
-  publications.yaml        ← paper list (see §4)
-layouts/                   ← the HTML templates (the "theme"). Rarely touched.
-  baseof.html                  the page skeleton every page is poured into
-  home.html                    home page template (photo + name + text)
-  page.html                    template for every normal page
-  list.html                    template for a folder of pages
-  404.html
-  _partials/                   reusable bits: head, header, footer, icons/
-  _shortcodes/                 custom markdown helpers (see §5)
-assets/css/main.css        ← all styling. Colours are at the very top.
-static/                    ← files served as-is
-  images/                      self.png (portrait), logo.png (favicon)
-  files/                       put cv.pdf here
-archetypes/                template used by `hugo new`
+  publications.yaml        paper list, the Publications page is built from this
+assets/css/main.css        all styling, colours at the top
+static/
+  images/                      self.png (photo), logo.png (tab icon)
+  files/                       PDFs, e.g. cv.pdf
+layouts/                   HTML templates, rarely touched
 ```
 
-**Rule of thumb:** the URL follows the filename.
-`content/research.md` → `marilina.valatsos.gr/research/`.
-A folder needs an `_index.md` inside it to have its own page; that is why the home page is `content/_index.md`.
+URL follows the filename: `content/research.md` → `/research/`.
 
----
+## Notes
 
-## 3. Everyday edits
-
-### Change text on a page
-Open the matching file in `content/` and edit the markdown.
-Cheat sheet: <https://www.markdownguide.org/cheat-sheet/>
-
-Every content file starts with a block between `+++` lines — the *front matter*. Options used here:
-
-| Key | Effect |
-|---|---|
-| `title` | heading of the page and the browser tab |
-| `subtitle` | small grey line under the heading |
-| `toc = true` | shows a "Contents" box built from the `##` headings |
-| `math = true` | enables LaTeX on that page (`$...$` and `$$...$$`) |
-
-### Add a new tab
-1. Create `content/teaching.md` (or `hugo new content/teaching.md`).
-2. Add a block to the `[menu]` section of `hugo.toml`:
-
-```toml
-[[menu.main]]
-  name   = 'Teaching'
-  url    = '/teaching/'
-  weight = 7        # smaller number = further left
-```
-
-### Change the photo
-Replace `static/images/self.png`, or point `avatar` in `hugo.toml` at a different file. The favicon is `logo.png`, set by `logo`.
-
-### Add an image to a page
-Put it in `static/images/` and write `![Caption](/images/thing.png)`.
-
-### Change colours
-Top of `assets/css/main.css`, the `:root { … }` block. Light and dark palettes are the same variable names redefined twice — edit both.
-
----
-
-## 4. The publication list
-
-Do **not** edit the Publications page markdown. Edit `data/publications.yaml` and the page rebuilds itself, grouped by year, newest first:
-
-```yaml
-- title: "Exact title of the paper"
-  authors: "A. Someone, **Marilina Valatsou**, B. Other"   # ** ** bolds name
-  venue: "Astronomy & Astrophysics, 690, A12"
-  year: 2026
-  type: article        # article | preprint | proceedings | thesis
-  doi: "10.1051/0004-6361/xxxxx"
-  arxiv: "2601.01234"
-  note: "in review"    # optional, shown in the accent colour
-```
-
-Only `title`, `authors` and `year` are required. `doi`, `arxiv`, `url` and `pdf` each become a small link button. Indentation matters in YAML — two spaces, no tabs.
-
----
-
-## 5. Shortcodes (extra bits inside markdown)
-
-| Shortcode | What it does |
-|---|---|
-| `{{< publications >}}` | renders `data/publications.yaml` |
-| `{{< button href="/files/cv.pdf" blank="true" >}}Text{{< /button >}}` | pill button; add `style="ghost"` for the outlined version |
-| `{{< cards >}}{{< card title="X" >}}text{{< /card >}}{{< /cards >}}` | responsive grid of boxes (used on Research) |
+- New paper → `data/publications.yaml`, not `publications.md`. Only `title`, `authors` and `year` are required. Two-space indents, no tabs.
+- New tab → new file in `content/` + a `[[menu.main]]` block in `hugo.toml`.
+- Images → `static/images/`, used as `![caption](/images/thing.png)`.
+- `public/` is generated by Hugo, not edited and not tracked by git.
