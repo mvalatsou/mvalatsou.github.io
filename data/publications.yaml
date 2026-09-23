@@ -21,14 +21,6 @@
   year: 2026
   note: "in preparation"
 
-- title: "Long-Term Evolution of Gas Giants and Sub-Neptunes with the JADE Code"
-  topics: [interiors, atmospheres, modelling]
-  authors: "E. Wong, V. Bourrier, Y. Alibert, P. Eggenberger, J. Egger, C. Dorn, J. Leconte, C. Mordasini, J. Owen, and **M. Valatsou**"
-  year: 2026
-  type: conference paper
-  doi: "10.5194/epsc2026-1402"
-  note: "EPSC Abstracts 2026"
-
 # - title: "Energy-limited volcanic outgassing"
 #   topics: [interiors, atmospheres]
 #   authors: "C. M. Guimond, R. T. Pierrehumbert, **M. Valatsou**, C. Dorn"
@@ -46,6 +38,14 @@
   authors: "L. Naponiello, P. Leonardi, G. Pichierri, **M. Valatsou**, M. Damasso, C. Dorn, A. S. Bonomo, A. Sozzetti"
   year: 2026
   note: "submitted"
+  
+- title: "Long-Term Evolution of Gas Giants and Sub-Neptunes with the JADE Code"
+  topics: [interiors, atmospheres, modelling]
+  authors: "E. Wong, V. Bourrier, Y. Alibert, P. Eggenberger, J. Egger, C. Dorn, J. Leconte, C. Mordasini, J. Owen, and **M. Valatsou**"
+  year: 2026
+  type: conference paper
+  doi: "10.5194/epsc2026-1402"
+  note: "EPSC Abstracts 2026"
 
 - title: "Revisiting TOI-4438 and TOI-442 planetary systems with new observations from SPIRou and TESS"
   topics: [observations, interiors]

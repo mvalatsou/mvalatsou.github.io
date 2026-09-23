@@ -5,14 +5,15 @@
    =========================================================================== */
 
 :root {
-  --bg:        #fdfcfa;
-  --bg-soft:   #f3f0ea;
-  --fg:        #1e1c1a;
-  --fg-muted:  #66605a;
-  --border:    #e0dad0;
-  --accent:    #8a5a2b;
-  --accent-soft: #f0e6d8;
-  --shadow:    0 1px 2px rgba(30, 28, 26, .06), 0 8px 24px rgba(30, 28, 26, .05);
+  --bg:        #FFFCF9;   /* warm off-white (was #FFF9F2) */
+  --bg-soft:   #F7EEE2;
+  --fg:        #2B1D1F;
+  --fg-muted:  #6E5A5C;
+  --border:    #EAD8C3;
+  --accent:    #800020;   /* burgundy: links, current tab */
+  --accent-soft: #F3E6D5; /* beige: box behind the current tab */
+  --accent-2:  #D45060;   /* rose: decoration only (underlines, quote bar) */
+  --shadow:    0 1px 2px rgba(43, 29, 31, .06), 0 8px 24px rgba(43, 29, 31, .05);
 
   --font-body: ui-serif, Georgia, "Iowan Old Style", "Palatino Linotype", serif;
   --font-ui:   ui-sans-serif, system-ui, -apple-system, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -24,24 +25,26 @@
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg:      #16151a;
-    --bg-soft: #201f26;
-    --fg:      #e9e6e1;
-    --fg-muted:#a29c95;
-    --border:  #33313a;
-    --accent:  #d9a566;
-    --accent-soft: #2c2620;
+    --bg:      #1C1416;
+    --bg-soft: #271C1F;
+    --fg:      #F3E6D5;
+    --fg-muted:#B09A9C;
+    --border:  #3E2C30;
+    --accent:  #E07A87;
+    --accent-soft: #3A2227;
+    --accent-2: #D45060;
     --shadow:  0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
   }
 }
 :root[data-theme="dark"] {
-  --bg:      #16151a;
-  --bg-soft: #201f26;
-  --fg:      #e9e6e1;
-  --fg-muted:#a29c95;
-  --border:  #33313a;
-  --accent:  #d9a566;
-  --accent-soft: #2c2620;
+  --bg:      #1C1416;
+  --bg-soft: #271C1F;
+  --fg:      #F3E6D5;
+  --fg-muted:#B09A9C;
+  --border:  #3E2C30;
+  --accent:  #E07A87;
+  --accent-soft: #3A2227;
+  --accent-2: #D45060;
   --shadow:  0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.3);
 }
 
@@ -63,7 +66,9 @@ body {
 
 img { max-width: 100%; height: auto; }
 
-a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+a { color: var(--accent); text-decoration-color: var(--accent-2); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+/* **bold** text: rose underline. For coloured text instead, use  color: var(--accent-2); */
+strong, b { text-decoration: underline; text-decoration-color: var(--accent-2); text-decoration-thickness: 2px; text-underline-offset: 3px; }
 a:hover { text-decoration-style: solid; }
 
 .sr-only {
@@ -164,7 +169,7 @@ a:hover { text-decoration-style: solid; }
 
 .prose blockquote {
   margin: 1.5rem 0; padding: .25rem 0 .25rem 1.1rem;
-  border-left: 3px solid var(--accent); color: var(--fg-muted); font-style: italic;
+  border-left: 3px solid var(--accent-2); color: var(--fg-muted); font-style: italic;
 }
 .prose hr { border: 0; border-top: 1px solid var(--border); margin: 2.5rem 0; }
 
