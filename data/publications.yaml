@@ -27,11 +27,11 @@
 #   year: 2026
 #   note: "submitted"
 
-# - title: "Retention of Primary Atmospheres on Rocky Worlds Around M Dwarfs: Implications for TRAPPIST-1 Planets"
-#   topics: [atmospheres, chemistry, modelling]
-#   authors: "K. Bali, C. Dorn, **M. Valatsou**, H. Appius"
-#   year: 2026
-#   note: "submitted"
+- title: "Retention of Primary Atmospheres on Rocky Worlds Around M Dwarfs: Implications for TRAPPIST-1 Planets"
+  topics: [atmospheres, chemistry, modelling]
+  authors: "K. Bali, C. Dorn, **M. Valatsou**, H. Appius"
+  year: 2026
+  note: "submitted"
 
 - title: "Transit timing variations and a fourth sub-Neptune in the near-resonant system TOI-125"
   topics: [observations, interiors]
