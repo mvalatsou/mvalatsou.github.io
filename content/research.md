@@ -2,7 +2,7 @@
 title = 'Research'
 subtitle = 'Modelling exoplanetary interiors and atmospheres'
 math = true
-toc = true
+toc = false
 +++
 
 ## Overview
