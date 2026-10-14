@@ -26,6 +26,10 @@ enableRobotsTXT   = true
   # `icon` must match a file in layouts/_partials/icons/ (email, github, gitlab,
   # linkedin, orcid, scholar). Anything else falls back to a generic link icon.
   [[params.social]]
+    name = 'ORCID'
+    icon = 'orcid'
+    url  = 'https://orcid.org/0009-0005-3682-1593'
+  [[params.social]]
     name = 'Email'
     icon = 'email'
     url  = 'mailto:mvalatsou@phys.ethz.ch'
@@ -37,10 +41,6 @@ enableRobotsTXT   = true
     name = 'LinkedIn'
     icon = 'linkedin'
     url  = 'https://www.linkedin.com/in/marilina-valatsou-841197117'
-  # [[params.social]]
-  #   name = 'ORCID'
-  #   icon = 'orcid'
-  #   url  = 'https://orcid.org/0000-0000-0000-0000'
 
 # ---------------------------------------------------------------------------
 # Navigation tabs. `weight` decides the order (smaller = further left).
