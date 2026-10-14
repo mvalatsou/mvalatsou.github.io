@@ -13,8 +13,7 @@ In my PhD, I am curious to uncover the diversity of super-Earth (planets like th
 
 {{< cards >}}
 {{< card title="Interior structure" >}}
-Equations of state and mass–radius relations for rocky and volatile-rich
-planets.
+Equations of state and mass–radius relations for rocky and volatile-rich planets.
 {{< /card >}}
 {{< card title="Interior structure inference" >}}
 How to use observations to infer the interior structure of exoplanets.

@@ -4,9 +4,9 @@ title = 'About Me'
 
 ## Short bio
 
-Geologist turned geophysicist who did not want to exploit the Earth for oil & gas, so I turned to space!
+I am a Geologist turned geophysicist who did not want to exploit the Earth for oil & gas, so I turned to space!
 I have loved concepts around the universe, space, and stars of the night sky since I was very small but was fascinated to find out that there is an entire field on not only solar system planets, but exoplanets, i.e., planets orbiting stars other than the Sun (or no stars at all..).
-Now I model exoplanets and try to understand what those bodies that we observe with cool telescopes are made of based on laws of physics and chemistry. And btw we have discovered more than 6500 exoplanets as of right now!
+Now I model exoplanets and try to understand what those bodies that we observe with cool telescopes are made of based on laws of physics and chemistry. BTW - we have discovered more than 6500 exoplanets as of right now!
 
 ## Background
 
@@ -18,4 +18,4 @@ Now I model exoplanets and try to understand what those bodies that we observe w
 
 ## Outside the office
 
-I enjoy baking & cooking, listening to music and attending as many concerts as I can, playing video games & board games, and managing my work hours so I can have enough time to enjoy life.
+I enjoy baking & cooking, reading, listening to music and attending as many concerts as I can, playing video & board games, and managing my work hours so I can have enough time to enjoy life.
