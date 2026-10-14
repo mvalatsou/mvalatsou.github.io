@@ -1,6 +1,5 @@
 +++
 title = 'Research'
-subtitle = 'Modelling exoplanetary interiors and atmospheres'
 math = true
 toc = false
 +++
